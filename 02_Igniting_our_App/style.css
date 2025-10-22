@@ -1,0 +1,27 @@
+*{
+    color: rgb(0, 0, 1);
+}
+
+h1{
+    border: 2px solid red;
+    padding: 20px;
+    text-align: center;
+}
+
+h2{
+    border: 2px solid green;
+    padding: 20px;
+    text-align: center;
+}
+
+#heading1{
+    background-color: yellow;
+}
+
+#child1{
+    background-color: rgb(160, 141, 106);
+}
+
+#child2{
+    background-color: rgb(179, 223, 179);
+}
