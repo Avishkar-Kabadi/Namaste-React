@@ -11,7 +11,13 @@ const Body = () => {
     const handleFilter = () => {
         const filteredData = data.filter((item) => item.rating <= 4.5);
         setResData(filteredData);
+
+
     }
+
+
+
+
 
 
     return (
