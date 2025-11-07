@@ -1,13 +1,11 @@
 import React from "react";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
-import useOnlineStatus from "../utils/useOnlineStatus";
 const Body = () => {
     const [allResData, setAllResData] = React.useState([]);
     const [resData, setResData] = React.useState([]);
     const [azFilter, setAzFilter] = React.useState(false);
     const [searchText, setSearchText] = React.useState("");
-
 
 
     React.useEffect(() => {
@@ -35,7 +33,6 @@ const Body = () => {
             }
         })();
     }, []);
-
 
 
     // const filterData = () => {

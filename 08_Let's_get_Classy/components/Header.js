@@ -1,12 +1,10 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Header = () => {
 
     const [login, setLogin] = React.useState(false);
     const navigate = useNavigate();
-    const isOnline = useOnlineStatus();
 
     React.useEffect(() => {
 
@@ -21,11 +19,9 @@ const Header = () => {
             </div>
             <nav className="nav-items">
                 <ul>
-                    <li>Online Status:{isOnline ? "🟢" : "🔴"}</li>
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/about">about</Link></li>
                     <li><Link to="/contact">Contact</Link></li>
-                    <li><Link to="/grocery">Grocery</Link></li>
                     <li>Cart</li>
                     <button className="login-btn" onClick={() => navigate('/login')} > logout</button>
                 </ul>

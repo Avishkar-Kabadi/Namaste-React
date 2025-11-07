@@ -1,33 +1,25 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import useFetchMenu from "../utils/useFetchMenu";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 
 const RestaurantMenuPage = () => {
-    const [resMenu, setResMenu] = React.useState([]);
     React.useEffect(() => {
-        fetchMenu();
     }, []);
 
     const { id } = useParams();
+    const resData = useFetchMenu(id);
 
 
-    console.log(id);
+    console.log(resData);
+    const isOnline = useOnlineStatus();
 
 
+    if (isOnline) console.log("You're connected to internet");
+    else console.log("You are offline");
 
-    const fetchMenu = async () => {
-        try {
-            const res = await fetch(`
-                https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=18.9690247&lng=72.8205292&restaurantId=${id}/`);
 
-            const data = await res.json();
-            console.log(data);
-            setResMenu(data?.data);
-
-        } catch (err) {
-            console.log("Error fetching menu:", err);
-        }
-    };
 
 
     return (<div className="menu">

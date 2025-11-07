@@ -7,7 +7,6 @@ const Header = () => {
     const navigate = useNavigate();
 
     React.useEffect(() => {
-        console.log("useEffect called");
 
     }, [login]);
 

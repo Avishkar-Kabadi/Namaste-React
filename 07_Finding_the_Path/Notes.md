@@ -1,4 +1,3 @@
-
 # Finding the Path — Notes
 
 ## 1. Various ways to add images into our App
@@ -6,8 +5,9 @@
 There are 3 common ways to add images in a React app:
 
 a) Import and use (for local images in `src/`)
+
 ```javascript
-import logo from './logo.png';
+import logo from "./logo.png";
 
 function App() {
   return <img src={logo} alt="Logo" />;
@@ -15,12 +15,15 @@ function App() {
 ```
 
 b) Use the `public` folder
+
 ```html
 <img src="/logo.png" alt="Logo" />
 ```
+
 Public folder images don’t need imports — just use the relative path from the public root.
 
 c) Use online image URLs
+
 ```html
 <img src="https://example.com/image.jpg" alt="Remote" />
 ```
@@ -30,10 +33,13 @@ c) Use online image URLs
 ## 2. What happens if we do `console.log(useState())`?
 
 `useState()` returns an array with two elements: `[stateValue, setStateFunction]`. Logging it without an initial value shows:
+
 ```text
 [undefined, ƒ]
 ```
+
 Example:
+
 ```javascript
 console.log(useState(0));
 // Output: [0, ƒ]
@@ -65,19 +71,43 @@ Example: navigating between routes updates components without reloading the enti
 
 ## 5. Difference between Client-Side Routing and Server-Side Routing
 
-| Feature        | Client-Side Routing               | Server-Side Routing                       |
-|---------------:|----------------------------------|-------------------------------------------|
-| Page reload     | No reload                        | Full page reload                          |
-| Handled by      | Browser (e.g., React Router)     | Server                                    |
-| Speed           | Faster after first load          | Slower (reloads each page)                |
-| Example         | React app navigating routes      | Traditional website with separate pages   |
+|     Feature | Client-Side Routing          | Server-Side Routing                     |
+| ----------: | ---------------------------- | --------------------------------------- |
+| Page reload | No reload                    | Full page reload                        |
+|  Handled by | Browser (e.g., React Router) | Server                                  |
+|       Speed | Faster after first load      | Slower (reloads each page)              |
+|     Example | React app navigating routes  | Traditional website with separate pages |
 
 Client-side example (no reload):
+
 ```jsx
 <Link to="/about">About</Link>
 ```
 
 Server-side example (full reload):
+
 ```html
 <a href="/about">About</a>
+```
+
+## How to create Routes/Routing in React with BrowserRouter
+
+### step-1 create routes using createBrowserRoute
+
+```react
+
+import {createBrowserRoute} from "react-router-dom"
+
+const AppRouter=()=>{[
+  {
+    path:'/'.
+    element:<App/>
+  },
+  {
+    path:'/login',
+    element:<Login.>
+  }
+]}
+
+export default AppRouter;
 ```
