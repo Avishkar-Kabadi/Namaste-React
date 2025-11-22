@@ -1,5 +1,3 @@
-...existing code...
-
 # Types of Testing (developer)
 
 - Unit Testing
@@ -93,9 +91,3 @@ Summary: Enzyme tests the code; RTL tests the user experience.
 4. Write unit tests with Jest + RTL (getBy\*, userEvent).
 5. Add integration tests as needed.
 6. Use Cypress/Playwright for E2E scenarios.
-
-...existing code...
-
-```//
-
-```
